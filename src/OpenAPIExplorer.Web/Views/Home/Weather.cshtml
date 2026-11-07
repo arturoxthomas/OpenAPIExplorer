@@ -1,0 +1,2 @@
+@model WeatherResult
+<h1>🌤️ Clima</h1><p>Datos de Open-Meteo</p><form method="get"><label>Ciudad <input name="city" value="@ViewBag.City" maxlength="80" required /></label><button>Consultar</button></form>@if(ViewBag.Error != null){<p class="error">@ViewBag.Error</p>}@if(Model != null){<article class="result"><h2>@Model.City</h2><div class="metric">@Model.Temperature °C</div><p>Viento: @Model.WindSpeed km/h · Código meteorológico: @Model.WeatherCode</p></article>}
