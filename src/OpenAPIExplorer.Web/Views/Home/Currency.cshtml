@@ -1,2 +1,10 @@
 @model CurrencyResult
-<h1>💱 Conversor de monedas</h1><p>Datos de Frankfurter v2</p><form method="get"><label>Desde <input name="from" value="@ViewBag.From" maxlength="3" required /></label><label>Hasta <input name="to" value="@ViewBag.To" maxlength="3" required /></label><label>Monto <input name="amount" type="number" min="0.01" step="0.01" value="@ViewBag.Amount" required /></label><button>Convertir</button></form>@if(ViewBag.Error != null){<p class="error">@ViewBag.Error</p>}@if(Model != null){<article class="result"><h2>@Model.Amount @Model.From</h2><div class="metric">@Model.Converted @Model.To</div><p>Tasa: @Model.Rate · Fecha: @Model.Date</p></article>}
+@using OpenAPIExplorer.Application
+@{ var options=ViewBag.Options as IReadOnlyList<CurrencyOption> ?? Array.Empty<CurrencyOption>(); string from=ViewBag.From??"USD";string to=ViewBag.To??"EUR"; }
+<h1>💱 Conversor de monedas</h1><p>Selecciona las divisas disponibles en Frankfurter.</p>
+<form method="get">
+<label>Desde <select name="from" required>@foreach(var item in options){if(item.Code==from){<option value="@item.Code" selected>@item.Code — @item.Name</option>}else{<option value="@item.Code">@item.Code — @item.Name</option>}}</select></label>
+<label>Hasta <select name="to" required>@foreach(var item in options){if(item.Code==to){<option value="@item.Code" selected>@item.Code — @item.Name</option>}else{<option value="@item.Code">@item.Code — @item.Name</option>}}</select></label>
+<label>Monto <input name="amount" type="number" min="0.01" step="0.01" value="@ViewBag.Amount" required /></label><button>Convertir</button></form>
+@if(ViewBag.Error!=null){<p class="error">@ViewBag.Error</p>}
+@if(Model!=null){<article class="result"><h2>@Model.Amount @Model.From</h2><div class="metric">@Model.Converted @Model.To</div><p>Tasa: @Model.Rate · Fecha: @Model.Date</p></article>}
