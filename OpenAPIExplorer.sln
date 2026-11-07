@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAPIExplorer.Domain", "src\OpenAPIExplorer.Domain\OpenAPIExplorer.Domain.csproj", "{B92D54AD-9B61-4BA8-BD6E-884B63B58E11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAPIExplorer.Application", "src\OpenAPIExplorer.Application\OpenAPIExplorer.Application.csproj", "{6C834A23-A9A5-43BB-9A9B-8F6A9A3F7B5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAPIExplorer.Infrastructure", "src\OpenAPIExplorer.Infrastructure\OpenAPIExplorer.Infrastructure.csproj", "{849F14AF-2A6A-4C60-9ACB-7B80C1C96C5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAPIExplorer.Web", "src\OpenAPIExplorer.Web\OpenAPIExplorer.Web.csproj", "{AC927D75-2E73-44B6-8E72-54872B6CF6A1}"
+EndProject
+Global
+ GlobalSection(SolutionConfigurationPlatforms) = preSolution
+  Debug|Any CPU = Debug|Any CPU
+  Release|Any CPU = Release|Any CPU
+ EndGlobalSection
+ GlobalSection(ProjectConfigurationPlatforms) = postSolution
+  {B92D54AD-9B61-4BA8-BD6E-884B63B58E11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+  {B92D54AD-9B61-4BA8-BD6E-884B63B58E11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+  {B92D54AD-9B61-4BA8-BD6E-884B63B58E11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+  {B92D54AD-9B61-4BA8-BD6E-884B63B58E11}.Release|Any CPU.Build.0 = Release|Any CPU
+  {6C834A23-A9A5-43BB-9A9B-8F6A9A3F7B5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+  {6C834A23-A9A5-43BB-9A9B-8F6A9A3F7B5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+  {6C834A23-A9A5-43BB-9A9B-8F6A9A3F7B5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+  {6C834A23-A9A5-43BB-9A9B-8F6A9A3F7B5E}.Release|Any CPU.Build.0 = Release|Any CPU
+  {849F14AF-2A6A-4C60-9ACB-7B80C1C96C5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+  {849F14AF-2A6A-4C60-9ACB-7B80C1C96C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+  {849F14AF-2A6A-4C60-9ACB-7B80C1C96C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+  {849F14AF-2A6A-4C60-9ACB-7B80C1C96C5A}.Release|Any CPU.Build.0 = Release|Any CPU
+  {AC927D75-2E73-44B6-8E72-54872B6CF6A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+  {AC927D75-2E73-44B6-8E72-54872B6CF6A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+  {AC927D75-2E73-44B6-8E72-54872B6CF6A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+  {AC927D75-2E73-44B6-8E72-54872B6CF6A1}.Release|Any CPU.Build.0 = Release|Any CPU
+ EndGlobalSection
+EndGlobal
