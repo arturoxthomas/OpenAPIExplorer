@@ -1,0 +1,2 @@
+@model AstronomyResult
+<h1>🚀 Astronomía NASA</h1><p>Fotografía astronómica del día</p>@if(ViewBag.Error != null){<p class="error">@ViewBag.Error</p>}@if(Model != null){<article class="result"><h2>@Model.Title</h2><p>@Model.Date</p>@if(!string.IsNullOrWhiteSpace(Model.ImageUrl)){<img class="space" src="@Model.ImageUrl" alt="@Model.Title"/>}<p>@Model.Explanation</p>@if(!string.IsNullOrWhiteSpace(Model.SourceUrl)){<a href="@Model.SourceUrl" target="_blank" rel="noopener noreferrer">Ver fuente NASA</a>}</article>}
